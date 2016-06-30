@@ -1,3 +1,15 @@
 /nbproject/private/
 /build/
 /dist/
+/.gradle/
+/bin/
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Intellij
+.idea/
+*.iml
+*.iws

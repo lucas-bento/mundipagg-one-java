@@ -101,7 +101,7 @@ class HttpUtility {
         val responseObj = serializerResponse.Deserializer(TypeOfResponse, httpResponse.RawResponse, HttpContentType)
 
         // Monta e retorna obj
-        return HttpResponseGenerics<TResponse, TRequest>(RawRequest, httpResponse.RawResponse.orEmpty(), httpResponse.HttpStatusCode, responseObj, Request)
+        return HttpResponseGenerics(RawRequest, httpResponse.RawResponse.orEmpty(), httpResponse.HttpStatusCode, responseObj, Request)
     }
 
     /**
