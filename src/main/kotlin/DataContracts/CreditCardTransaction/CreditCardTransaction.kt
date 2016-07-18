@@ -11,7 +11,6 @@ data class CreditCardTransaction(var AmountInCents: Long,
                                  var CreditCard: CreditCard,
                                  var CreditCardOperation: CreditCardOperationEnum,
                                  var InstallmentCount: Int,
-
                                  var TransactionReference: String? = null,
                                  var Options: CreditCardTransactionOptions? = null,
                                  var Recurrency: Recurrency? = null,

@@ -5,4 +5,4 @@ import EnumTypes.CountryEnum
 /**
  * Endereço de Cobrança
  */
-class BillingAddress :Address()
+open class BillingAddress :Address()
