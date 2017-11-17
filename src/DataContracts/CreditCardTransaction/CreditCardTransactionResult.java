@@ -1,16 +1,17 @@
 package DataContracts.CreditCardTransaction;
 
+import java.util.Date;
+import java.util.UUID;
+
 import DataContracts.InstantBuy.CreditCardData;
 import EnumTypes.CreditCardOperationEnum;
 import EnumTypes.CreditCardTransactionStatusEnum;
-import java.util.Date;
-import java.util.UUID;
 
 /**
  * Resultado da transação de cartão de crédito
  */
 public class CreditCardTransactionResult {
-    
+
     /**
      * Mensagem de retorno da adquirente
      */
@@ -20,27 +21,27 @@ public class CreditCardTransactionResult {
      * Nome da adquirente
      */
     private String AcquirerName;
-    
+
     /**
      * Código de retorno da adquirente
      */
     private String AcquirerReturnCode;
-    
+
     /**
      * Código da filiação da loja na adquirente
      */
     private String AffiliationCode;
-    
+
     /**
      * Valor total da transação em centavos
      */
     private Long AmountInCents;
-    
+
     /**
      * Código de autorização
      */
-    private String AuthorizationCode;   
-    
+    private String AuthorizationCode;
+
     /**
      * Valor autorizado em centavos
      */
@@ -50,12 +51,12 @@ public class CreditCardTransactionResult {
      * Valor capturado em centavos
      */
     private Long CapturedAmountInCents;
-    
+
     /**
      * Data da Captura
      */
-    private Date CapturedDate;
-    
+    private String CapturedDate;
+
     /**
      * Dados do cartão de crédito
      */
@@ -65,7 +66,7 @@ public class CreditCardTransactionResult {
      * Operação da transação de cartão de crédito - Indica se deverá ser realizada uma captura automática da transação
      */
     private CreditCardOperationEnum CreditCardOperation;
-    
+
     /**
      * Status da transação
      */
@@ -75,7 +76,7 @@ public class CreditCardTransactionResult {
      * Data da recorrência (poderá ser futura)
      */
     private Date DueDate;
-    
+
     /**
      * Tempo de processamento da transação na adquirente
      */
@@ -85,32 +86,32 @@ public class CreditCardTransactionResult {
      * Nome do método de pagamento
      */
     private String PaymentMethodName;
-    
+
     /**
      * Valor estornado em centavos
      */
     private Long RefundedAmountInCents;
-    
+
     /**
      * Indica se houve sucesso no processamento
      */
     private Boolean Success;
-    
+
     /**
      * Identificador da transação na adquirente
      */
     private String TransactionIdentifier;
-    
+
     /**
      * Chave da transação. Utilizada para identificar a transação de cartão de crédito no gateway
      */
     private UUID TransactionKey;
-    
+
     /**
      * Chave da transação para adquirente, enviada pelo gateway
      */
     private String TransactionKeyToAcquirer;
-    
+
     /**
      * Referência da transação no sistema da loja
      */
@@ -128,7 +129,7 @@ public class CreditCardTransactionResult {
 
     /**
      * Recupera Dados do cartão de crédito
-     * @return 
+     * @return
      */
     public CreditCardData getCreditCard() {
         return CreditCard;
@@ -136,7 +137,7 @@ public class CreditCardTransactionResult {
 
     /**
      * Altera Dados do cartão de crédito
-     * @param CreditCard 
+     * @param CreditCard
      */
     public void setCreditCard(CreditCardData CreditCard) {
         this.CreditCard = CreditCard;
@@ -144,7 +145,7 @@ public class CreditCardTransactionResult {
 
     /**
      * Recupera Status da transação
-     * @return 
+     * @return
      */
     public CreditCardTransactionStatusEnum getCreditCardTransactionStatus() {
         return CreditCardTransactionStatus;
@@ -152,7 +153,7 @@ public class CreditCardTransactionResult {
 
     /**
      * Altera Status da transação
-     * @param CreditCardTransactionStatus 
+     * @param CreditCardTransactionStatus
      */
     public void setCreditCardTransactionStatus(CreditCardTransactionStatusEnum CreditCardTransactionStatus) {
         this.CreditCardTransactionStatus = CreditCardTransactionStatus;
@@ -160,7 +161,7 @@ public class CreditCardTransactionResult {
 
     /**
      * Recupera Tempo de processamento da transação na adquirente
-     * @return 
+     * @return
      */
     public Long getExternalTime() {
         return ExternalTime;
@@ -168,7 +169,7 @@ public class CreditCardTransactionResult {
 
     /**
      * Altera Tempo de processamento da transação na adquirente
-     * @param ExternalTime 
+     * @param ExternalTime
      */
     public void setExternalTime(Long ExternalTime) {
         this.ExternalTime = ExternalTime;
@@ -176,7 +177,7 @@ public class CreditCardTransactionResult {
 
     /**
      * Recupera Chave da transação. Utilizada para identificar a transação de cartão de crédito no gateway
-     * @return 
+     * @return
      */
     public UUID getTransactionKey() {
         return TransactionKey;
@@ -184,7 +185,7 @@ public class CreditCardTransactionResult {
 
     /**
      * Altera Chave da transação. Utilizada para identificar a transação de cartão de crédito no gateway
-     * @param TransactionKey 
+     * @param TransactionKey
      */
     public void setTransactionKey(UUID TransactionKey) {
         this.TransactionKey = TransactionKey;
@@ -192,7 +193,7 @@ public class CreditCardTransactionResult {
 
     /**
      * Recupera Identificador da transação na adquirente
-     * @return 
+     * @return
      */
     public String getTransactionIdentifier() {
         return TransactionIdentifier;
@@ -200,7 +201,7 @@ public class CreditCardTransactionResult {
 
     /**
      * Altera Identificador da transação na adquirente
-     * @param TransactionIdentifier 
+     * @param TransactionIdentifier
      */
     public void setTransactionIdentifier(String TransactionIdentifier) {
         this.TransactionIdentifier = TransactionIdentifier;
@@ -208,7 +209,7 @@ public class CreditCardTransactionResult {
 
     /**
      * Recupera Código de autorização
-     * @return 
+     * @return
      */
     public String getAuthorizationCode() {
         return AuthorizationCode;
@@ -216,7 +217,7 @@ public class CreditCardTransactionResult {
 
     /**
      * Altera Código de autorização
-     * @param AuthorizationCode 
+     * @param AuthorizationCode
      */
     public void setAuthorizationCode(String AuthorizationCode) {
         this.AuthorizationCode = AuthorizationCode;
@@ -224,7 +225,7 @@ public class CreditCardTransactionResult {
 
     /**
      * Recupera Identificador único gerado pela adquirente
-     * @return 
+     * @return
      */
     public String getUniqueSequentialNumber() {
         return UniqueSequentialNumber;
@@ -232,7 +233,7 @@ public class CreditCardTransactionResult {
 
     /**
      * Altera Identificador único gerado pela adquirente
-     * @param UniqueSequentialNumber 
+     * @param UniqueSequentialNumber
      */
     public void setUniqueSequentialNumber(String UniqueSequentialNumber) {
         this.UniqueSequentialNumber = UniqueSequentialNumber;
@@ -240,7 +241,7 @@ public class CreditCardTransactionResult {
 
     /**
      * Recupera Operação da transação de cartão de crédito - Indica se deverá ser realizada uma captura automática da transação
-     * @return 
+     * @return
      */
     public CreditCardOperationEnum getCreditCardOperation() {
         return CreditCardOperation;
@@ -248,7 +249,7 @@ public class CreditCardTransactionResult {
 
     /**
      * Altera Operação da transação de cartão de crédito - Indica se deverá ser realizada uma captura automática da transação
-     * @param CreditCardOperation 
+     * @param CreditCardOperation
      */
     public void setCreditCardOperation(CreditCardOperationEnum CreditCardOperation) {
         this.CreditCardOperation = CreditCardOperation;
@@ -256,7 +257,7 @@ public class CreditCardTransactionResult {
 
     /**
      * Recupera Valor total da transação em centavos
-     * @return 
+     * @return
      */
     public Long getAmountInCents() {
         return AmountInCents;
@@ -264,7 +265,7 @@ public class CreditCardTransactionResult {
 
     /**
      * Altera Valor total da transação em centavos
-     * @param AmountInCents 
+     * @param AmountInCents
      */
     public void setAmountInCents(Long AmountInCents) {
         this.AmountInCents = AmountInCents;
@@ -272,7 +273,7 @@ public class CreditCardTransactionResult {
 
     /**
      * Recupera Valor autorizado em centavos
-     * @return 
+     * @return
      */
     public Long getAuthorizedAmountInCents() {
         return AuthorizedAmountInCents;
@@ -280,7 +281,7 @@ public class CreditCardTransactionResult {
 
     /**
      * Altera Valor autorizado em centavos
-     * @param AuthorizedAmountInCents 
+     * @param AuthorizedAmountInCents
      */
     public void setAuthorizedAmountInCents(Long AuthorizedAmountInCents) {
         this.AuthorizedAmountInCents = AuthorizedAmountInCents;
@@ -288,7 +289,7 @@ public class CreditCardTransactionResult {
 
     /**
      * Recupera Valor capturado em centavos
-     * @return 
+     * @return
      */
     public Long getCapturedAmountInCents() {
         return CapturedAmountInCents;
@@ -296,7 +297,7 @@ public class CreditCardTransactionResult {
 
     /**
      * Altera Valor capturado em centavos
-     * @param CapturedAmountInCents 
+     * @param CapturedAmountInCents
      */
     public void setCapturedAmountInCents(Long CapturedAmountInCents) {
         this.CapturedAmountInCents = CapturedAmountInCents;
@@ -304,7 +305,7 @@ public class CreditCardTransactionResult {
 
     /**
      * Recupera Valor estornado em centavos
-     * @return 
+     * @return
      */
     public Long getRefundedAmountInCents() {
         return RefundedAmountInCents;
@@ -312,7 +313,7 @@ public class CreditCardTransactionResult {
 
     /**
      * Altera Valor estornado em centavos
-     * @param RefundedAmountInCents 
+     * @param RefundedAmountInCents
      */
     public void setRefundedAmountInCents(Long RefundedAmountInCents) {
         this.RefundedAmountInCents = RefundedAmountInCents;
@@ -320,7 +321,7 @@ public class CreditCardTransactionResult {
 
     /**
      * Recupera Valor cancelado em centavos
-     * @return 
+     * @return
      */
     public Long getVoidedAmountInCents() {
         return VoidedAmountInCents;
@@ -328,7 +329,7 @@ public class CreditCardTransactionResult {
 
     /**
      * Altera Valor cancelado em centavos
-     * @param VoidedAmountInCents 
+     * @param VoidedAmountInCents
      */
     public void setVoidedAmountInCents(Long VoidedAmountInCents) {
         this.VoidedAmountInCents = VoidedAmountInCents;
@@ -336,23 +337,23 @@ public class CreditCardTransactionResult {
 
     /**
      * Recupera Data da captura
-     * @return 
+     * @return
      */
-    public Date getCapturedDate() {
+    public String getCapturedDate() {
         return CapturedDate;
     }
 
     /**
      * Altera Data da captura
-     * @param CapturedDate 
+     * @param CapturedDate
      */
-    public void setCapturedDate(Date CapturedDate) {
+    public void setCapturedDate(String CapturedDate) {
         this.CapturedDate = CapturedDate;
     }
-    
+
     /**
      * Recupera Data da recorrência (poderá ser futura)
-     * @return 
+     * @return
      */
     public Date getDueDate() {
         return DueDate;
@@ -360,7 +361,7 @@ public class CreditCardTransactionResult {
 
     /**
      * Altera Data da recorrência (poderá ser futura)
-     * @param DueDate 
+     * @param DueDate
      */
     public void setDueDate(Date DueDate) {
         this.DueDate = DueDate;
@@ -368,7 +369,7 @@ public class CreditCardTransactionResult {
 
     /**
      * Recupera Referência da transação no sistema da loja
-     * @return 
+     * @return
      */
     public String getTransactionReference() {
         return TransactionReference;
@@ -376,7 +377,7 @@ public class CreditCardTransactionResult {
 
     /**
      * Altera Referência da transação no sistema da loja
-     * @param TransactionReference 
+     * @param TransactionReference
      */
     public void setTransactionReference(String TransactionReference) {
         this.TransactionReference = TransactionReference;
@@ -384,7 +385,7 @@ public class CreditCardTransactionResult {
 
     /**
      * Recupera Código de retorno da adquirente
-     * @return 
+     * @return
      */
     public String getAcquirerReturnCode() {
         return AcquirerReturnCode;
@@ -392,7 +393,7 @@ public class CreditCardTransactionResult {
 
     /**
      * Altera Código de retorno da adquirente
-     * @param AcquirerReturnCode 
+     * @param AcquirerReturnCode
      */
     public void setAcquirerReturnCode(String AcquirerReturnCode) {
         this.AcquirerReturnCode = AcquirerReturnCode;
@@ -400,7 +401,7 @@ public class CreditCardTransactionResult {
 
     /**
      * Recupera Mensagem de retorno da adquirente
-     * @return 
+     * @return
      */
     public String getAcquirerMessage() {
         return AcquirerMessage;
@@ -408,7 +409,7 @@ public class CreditCardTransactionResult {
 
     /**
      * Altera Mensagem de retorno da adquirente
-     * @param AcquirerMessage 
+     * @param AcquirerMessage
      */
     public void setAcquirerMessage(String AcquirerMessage) {
         this.AcquirerMessage = AcquirerMessage;
@@ -416,7 +417,7 @@ public class CreditCardTransactionResult {
 
     /**
      * Recupera se houve sucesso no processamento
-     * @return 
+     * @return
      */
     public Boolean getSuccess() {
         return Success;
@@ -424,7 +425,7 @@ public class CreditCardTransactionResult {
 
     /**
      * Altera se houve sucesso no processamento
-     * @param Success 
+     * @param Success
      */
     public void setSuccess(Boolean Success) {
         this.Success = Success;
@@ -432,7 +433,7 @@ public class CreditCardTransactionResult {
 
     /**
      * Recupera Código da filiação da loja na adquirente
-     * @return 
+     * @return
      */
     public String getAffiliationCode() {
         return AffiliationCode;
@@ -440,15 +441,15 @@ public class CreditCardTransactionResult {
 
     /**
      * Altera Código da filiação da loja na adquirente
-     * @param AffiliationCode 
+     * @param AffiliationCode
      */
     public void setAffiliationCode(String AffiliationCode) {
         this.AffiliationCode = AffiliationCode;
     }
 
     /**
-     * Recupera Nome do método de pagamento 
-     * @return 
+     * Recupera Nome do método de pagamento
+     * @return
      */
     public String getPaymentMethodName() {
         return PaymentMethodName;
@@ -456,7 +457,7 @@ public class CreditCardTransactionResult {
 
     /**
      * Altera Nome do método de pagamento
-     * @param PaymentMethodName 
+     * @param PaymentMethodName
      */
     public void setPaymentMethodName(String PaymentMethodName) {
         this.PaymentMethodName = PaymentMethodName;
@@ -464,7 +465,7 @@ public class CreditCardTransactionResult {
 
     /**
      * Recupera nome do adquirente
-     * @return 
+     * @return
      */
     public String getAcquirerName() {
         return AcquirerName;
@@ -472,7 +473,7 @@ public class CreditCardTransactionResult {
 
     /**
      * Altera Nome do Adquirente
-     * @param AcquirerName 
+     * @param AcquirerName
      */
     public void setAcquirerName(String AcquirerName) {
         this.AcquirerName = AcquirerName;
@@ -480,7 +481,7 @@ public class CreditCardTransactionResult {
 
     /**
      * Recupera Chave da transação para adquirente, enviada pelo gateway
-     * @return 
+     * @return
      */
     public String getTransactionKeyToAcquirer() {
         return TransactionKeyToAcquirer;
@@ -488,7 +489,7 @@ public class CreditCardTransactionResult {
 
     /**
      * Altera Chave da transação para adquirente, enviada pelo gateway
-     * @param TransactionKeyToAcquirer 
+     * @param TransactionKeyToAcquirer
      */
     public void setTransactionKeyToAcquirer(String TransactionKeyToAcquirer) {
         this.TransactionKeyToAcquirer = TransactionKeyToAcquirer;

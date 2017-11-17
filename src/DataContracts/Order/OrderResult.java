@@ -1,36 +1,35 @@
 package DataContracts.Order;
 
-import java.util.Date;
 import java.util.UUID;
 
 /**
  * Dados do Pedido
  */
 public class OrderResult {
-    
+
     /**
      * Construtor da Classe
      */
     public OrderResult() {}
-    
+
     /**
      * Data de criação do pedido no gateway
      */
-    private Date CreateDate;
-    
+    private String CreateDate;
+
     /**
      * Identificador do pedido na loja
      */
     private String OrderReference;
-    
+
     /**
      * Identificador do pedido no gateway
      */
     private UUID OrderKey;
-    
+
     /**
      * Recupera identificador da loja na plataforma
-     * @return 
+     * @return
      */
     public String getOrderReference() {
         return OrderReference;
@@ -38,7 +37,7 @@ public class OrderResult {
 
     /**
      * Altera identificador da loja na plataforma
-     * @param OrderReference 
+     * @param OrderReference
      */
     public void setOrderReference(String OrderReference) {
         this.OrderReference = OrderReference;
@@ -46,7 +45,7 @@ public class OrderResult {
 
     /**
      * Recupera identificador do pedido no gateway
-     * @return 
+     * @return
      */
     public UUID getOrderKey() {
         return OrderKey;
@@ -54,7 +53,7 @@ public class OrderResult {
 
     /**
      * Altera identificador do pedido no gateway
-     * @param OrderKey 
+     * @param OrderKey
      */
     public void setOrderKey(UUID OrderKey) {
         this.OrderKey = OrderKey;
@@ -62,17 +61,17 @@ public class OrderResult {
 
     /**
      * Recupera data de criação no gateway
-     * @return 
+     * @return
      */
-    public Date getCreateDate() {
+    public String getCreateDate() {
         return CreateDate;
     }
 
     /**
      * Altera data de criação no gateway
-     * @param CreateDate 
+     * @param CreateDate
      */
-    public void setCreateDate(Date CreateDate) {
+    public void setCreateDate(String CreateDate) {
         this.CreateDate = CreateDate;
     }
 }
